@@ -1,1 +1,1 @@
-Project created as a collaboration between Red, Nathan Wong, and Kevin Ma for the E2C2 competition
+Project created as a collaboration between Red Jerard, Nathan Wong, and Kevin Ma for the E2C2 competition
