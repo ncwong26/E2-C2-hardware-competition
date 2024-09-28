@@ -114,5 +114,5 @@ void rotateServo(Servo serv, short int* pos, short int rot)
     return;
   }
   *pos += rot;
-  serv.write(*motorPos);
+  serv.write(*pos);
 }
