@@ -4,6 +4,7 @@ const int tPrPin = A0;
 const int bPrPin = A1;
 const int lPrPin = A2;
 const int rPrPin = A3;
+const int vPin = A4;
 Servo pitchServo;
 Servo yawServo;
 
@@ -99,6 +100,10 @@ void loop() {
     }
 
     delay(15);
+
+    int val = analogRead(vPin);
+    Serial.print("Voltage:");
+    Serial.print(val);
     }
 }
 
