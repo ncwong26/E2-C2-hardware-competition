@@ -91,7 +91,7 @@ void loop() {
     else if(rVal < (lVal - leniency))
     {
       Serial.println("turn left");
-      rotateServo(pitchServo, &pitchPos, -1);
+      rotateServo(yawServo, &yawPos, -1);
     }
     else
     {
