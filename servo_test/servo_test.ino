@@ -67,9 +67,9 @@ void readServo()
   Serial.println(servo1.read());
 }
 
-void functionTest(Servo serv, short int* motorPos)
+void functionTest(Servo serv, int* motorPos)
 {
   *motorPos += 10;
-  readServo()
-  serv.write(motorPos)
+  readServo();
+  serv.write(*motorPos);
 }
