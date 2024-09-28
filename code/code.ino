@@ -105,11 +105,11 @@ void loop() {
 void rotateServo(Servo serv, short int* pos, short int rot)
 {
   short int tPos = *pos;
-  if(rot > 0 && (rot + tPos) > 180)
+  if(rot > 0 && (rot + tPos) > 140)
   {
     return;
   }
-  if(rot < 0 && (rot + tPos) < 0)
+  if(rot < 0 && (rot + tPos) < 40)
   {
     return;
   }
