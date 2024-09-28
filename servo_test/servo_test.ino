@@ -29,27 +29,30 @@ void setup()
     angle = servo1.read();
 
     delay(500);
-    //set servo in a single write to 90 degrees
-    Serial.println("Single write rotation to 90 degrees");
-    servo1.write(90);
-    readServo();
+    functionTest(servo1, &angle);
 
-    delay(500);
-    //set servo in a single write to 0 degrees
-    Serial.println("Single write rotation to 0 degrees");
-    servo1.write(0);
-    readServo();
+    // delay(500);
+    // //set servo in a single write to 90 degrees
+    // Serial.println("Single write rotation to 90 degrees");
+    // servo1.write(90);
+    // readServo();
 
-    delay(500);
-    //continuously move servo to 180 degrees at an increment of 2 degrees and a midstep of 15ms
-    for(int angle = 0; angle < 180; angle += 2)
-    {
-      servo1.write(angle);
-      delay(15);
-    }
-    readServo();
+    // delay(500);
+    // //set servo in a single write to 0 degrees
+    // Serial.println("Single write rotation to 0 degrees");
+    // servo1.write(0);
+    // readServo();
 
-    Serial.println("Test finished");
+    // delay(500);
+    // //continuously move servo to 180 degrees at an increment of 2 degrees and a midstep of 15ms
+    // for(int angle = 0; angle <= 180; angle += 2)
+    // {
+    //   servo1.write(angle);
+    //   delay(15);
+    // }
+    // readServo();
+
+    // Serial.println("Test finished");
   }
 }
 
@@ -62,4 +65,11 @@ void readServo()
 {
   Serial.print("Current angle: ");
   Serial.println(servo1.read());
+}
+
+void functionTest(Servo serv, short int* motorPos)
+{
+  *motorPos += 10;
+  readServo()
+  serv.write(motorPos)
 }
