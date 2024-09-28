@@ -41,11 +41,11 @@ void setup()
     readServo();
 
     delay(500);
-    //continuously move servo to 180 degrees at an increment of 2 degrees and a midstep of 10ms
+    //continuously move servo to 180 degrees at an increment of 2 degrees and a midstep of 15ms
     for(int angle = 0; angle < 180; angle += 2)
     {
       servo1.write(angle);
-      delay(10);
+      delay(15);
     }
     readServo();
 
