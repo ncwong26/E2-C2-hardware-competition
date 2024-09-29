@@ -4,6 +4,7 @@ const int tPrPin = A0;
 const int bPrPin = A1;
 const int lPrPin = A2;
 const int rPrPin = A3;
+const int vPin = A4;
 Servo pitchServo;
 Servo yawServo;
 
@@ -99,17 +100,21 @@ void loop() {
     }
 
     delay(15);
+
+    int val = analogRead(vPin);
+    Serial.print("Voltage:");
+    Serial.print(val);
     }
 }
 
 void rotateServo(Servo serv, short int* pos, short int rot)
 {
   short int tPos = *pos;
-  if(rot > 0 && (rot + tPos) > 180)
+  if(rot > 0 && (rot + tPos) > 140)
   {
     return;
   }
-  if(rot < 0 && (rot + tPos) < 0)
+  if(rot < 0 && (rot + tPos) < 40)
   {
     return;
   }
